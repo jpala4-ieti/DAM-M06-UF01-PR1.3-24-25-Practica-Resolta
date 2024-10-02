@@ -1,8 +1,8 @@
 package com.project.pr13;
 
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.*;
@@ -12,18 +12,39 @@ import java.io.File;
 
 public class PR131Main {
 
-    public static void main(String[] args) {
-        String directori = System.getProperty("user.dir") + File.separator + "data" + File.separator + "pr13";
-        File dataDir = new File(directori);
+    private File dataDir;
 
+    public PR131Main(File dataDir) {
+        this.dataDir = dataDir;
+    }
+
+    // Getter per dataDir
+    public File getDataDir() {
+        return dataDir;
+    }
+
+    // Setter per dataDir
+    public void setDataDir(File dataDir) {
+        this.dataDir = dataDir;
+    }
+
+    public static void main(String[] args) {
+        String userDir = System.getProperty("user.dir");
+        File dataDir = new File(userDir, "data" + File.separator + "pr13");
+
+        PR131Main app = new PR131Main(dataDir);
+        app.processarDocument("biblioteca.xml");
+    }
+
+    public void processarDocument(String filename) {
         if (comprovarIDirCrearDirectori(dataDir)) {
             Document doc = construirDocument();
-            File fitxerSortida = new File(dataDir, "biblioteca.xml");
+            File fitxerSortida = new File(dataDir, filename);
             guardarDocument(doc, fitxerSortida);
         }
     }
 
-    private static boolean comprovarIDirCrearDirectori(File directori) {
+    private boolean comprovarIDirCrearDirectori(File directori) {
         if (!directori.exists()) {
             return directori.mkdirs();
         }
