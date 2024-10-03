@@ -1,6 +1,6 @@
 # Exemple de guardar dades a arxius #
 
-En aquest projecte hi ha diversos exemples de com guardar dades en Java, cap a arxius de text, binaris, XML, CSV i objectes serialitzats
+Aquest projecte correspon a la pràctica PR1.3 relacionada amb treball amb documents XML
 
 ### Instruccions ###
 
@@ -14,44 +14,15 @@ Cal el 'Maven' per compilar el projecte
 ```bash
 mvn clean
 mvn compile
+mvn test
 ```
 
 Per executar el projecte a Windows cal
 ```bash
-.\run.ps1 com.project.Main
+.\run.ps1 com.project.pr13.PR13Main
 ```
 
 Per executar el projecte a Linux/macOS cal
 ```bash
-./run.sh com.project.Main
-```
-
-Per fer anar classes específiques amb main:
-```bash
-.\run.ps1 com.project.EscripturaDadesPrimitives
-./run.sh com.project.EscripturaDadesPrimitives
-```
-
-### Ordre recomanat d'estudi:
-
-```
-    GestioArxius.java
-
-    EscripturaArxiuWriter.java
-    LecturaArxiuScanner.java
-
-    EscripturaArxiuList.java
-    LecturaArxiuList.java
-
-    EscripturaDadesPrimitives.java
-    LecturaDadesPrimitives.java
-
-    EscripturaObjectes.java
-    LecturaObjectes.java
-
-    EscripturaLlistes.java
-    LecturaLlistes.java
-
-    GestioCSV.java
-    GestioXML.java
+./run.sh com.project.pr13.PR13Main
 ```
