@@ -1,4 +1,4 @@
-# Exemple de guardar dades a arxius #
+# Pràctica PR1.3 - Pràctica resolta #
 
 Aquest projecte correspon a la pràctica PR1.3 relacionada amb treball amb documents XML
 
