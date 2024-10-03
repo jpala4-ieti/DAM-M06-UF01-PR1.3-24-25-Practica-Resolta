@@ -4,12 +4,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import com.project.pr13.format.PersonaFormatter;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.InputStream;
+
+import com.project.pr13.format.PersonaFormatter;
+
 
 /**
  * Classe principal que gestiona la lectura i el processament de fitxers XML per obtenir dades de persones.
